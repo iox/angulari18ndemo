@@ -1,0 +1,43 @@
+{
+  "name": "angulari18ndemo",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.2",
+    "angular-resource": "1.3.2",
+    "angular-animate": "1.3.2",
+    "angular-route": "1.3.2",
+    "angular-mocks": "1.3.2",
+    "angular-sanitize": "1.3.2",
+    "angular-messages": "1.3.2",
+    "angular-ui-bootstrap-bower": "latest",
+    "angular-loading-bar": "latest",
+    "angular-elastic": "~2.3.5",
+    "angular-recursion": "latest",
+    "angular-gravatar": "latest",
+
+    "angular-translate": "latest",
+    "angular-translate-loader-url": "latest",
+
+    "numeral": "latest",
+    "lodash": "~3",
+    "moment": "latest",
+    "modernizr": "latest",
+    "jquery-autosize": "latest",
+    "animate.css": "latest",
+    "uuid-js": "~0.7.5"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  },
+  "resolutions": {
+    "angular": "1.3.2",
+    "jquery": "~2.1.1"
+  }
+}
