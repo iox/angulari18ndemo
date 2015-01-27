@@ -9,4 +9,5 @@
 
 
 //= require ./main
+//= require ./config
 //= require ./table_controller
