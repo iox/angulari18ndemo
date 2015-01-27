@@ -4,3 +4,14 @@
 h1{
   padding: 20px 0;
 }
+table td.density{
+  text-align:right;
+}
+
+#table-filters{
+  margin-bottom: 20px;
+}
+
+#table-filters .form-control{
+  margin-right: 20px;
+}

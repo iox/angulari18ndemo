@@ -1,15 +1,25 @@
-%div{'ng-controller' => 'TableCtrl'}
+%div{'ng-controller' => 'TableCtrl as table'}
 
-  %h1 Population of european countries
+  %h1 Population Density
+
+  #table-filters.form-inline
+    .form-group
+      %input.form-control{'ng-model' => "table.search_query", 'placeholder' => 'Search'}
+    .form-group
+      %select.form-control{"ng-model" => "table.order"}
+        %option{:value => "name"} Order by country name
+        %option{:value => "code"} Order by country code
+        %option{:value => "density"} Order by population density
+    %a.btn.btn-default{'ng-click' => 'table.reverse = !table.reverse'} Invert order
 
   %table.table.table-bordered
     %thead
       %tr
-        %th Country
+        %th Country Name
         %th Country Code
-        %th Population Density
+        %th Population Density in 2010
     %tbody
-      %tr
-        %td Spain
-        %td ES
-        %td 11000
+      %tr{'ng-repeat' => 'country in table.population_density | filter:table.search_query | orderBy:table.order : table.reverse'}
+        %td.name    {{country.name}}
+        %td.code    {{country.code}}
+        %td.density {{country.density | number:2}}
