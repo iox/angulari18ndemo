@@ -13,9 +13,7 @@
     "angular-translate": "latest",
     "angular-translate-loader-url": "latest",
     "angular-cookies": "latest",
-    "bootswatch-dist": "3.3.0-united"
-  },
-  "devDependencies": {
+    "bootswatch-dist": "3.3.0-united",
     "jquery": "~2.1.1"
   },
   "resolutions": {
