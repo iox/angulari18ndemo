@@ -21,17 +21,16 @@
     "angular-elastic": "~2.3.5",
     "angular-recursion": "latest",
     "angular-gravatar": "latest",
-
     "angular-translate": "latest",
     "angular-translate-loader-url": "latest",
-
     "numeral": "latest",
     "lodash": "~3",
     "moment": "latest",
     "modernizr": "latest",
     "jquery-autosize": "latest",
     "animate.css": "latest",
-    "uuid-js": "~0.7.5"
+    "uuid-js": "~0.7.5",
+    "bootswatch-dist": "3.3.0-united"
   },
   "devDependencies": {
     "jquery": "~2.1.1"
