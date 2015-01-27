@@ -1,25 +1,29 @@
 %div{'ng-controller' => 'TableCtrl as table'}
 
-  %h1 Population Density
+  %a.pull-right.btn.btn-primary{'ng-click' => 'table.toggleLanguage()'} {{ 'change_language' | translate }}
+
+  %h1 {{ 'table.title' | translate }}
 
   #table-filters.form-inline
     .form-group
-      %input.form-control{'ng-model' => "table.search_query", 'placeholder' => 'Search'}
+      %input.form-control{'ng-model' => "table.search_query", 'placeholder' => "{{ 'table.search' | translate }}"}
     .form-group
       %select.form-control{"ng-model" => "table.order"}
-        %option{:value => "name"} Order by country name
-        %option{:value => "code"} Order by country code
-        %option{:value => "density"} Order by population density
-    %a.btn.btn-default{'ng-click' => 'table.reverse = !table.reverse'} Invert order
+        %option{:value => "name"} {{ 'table.order.name' | translate }}
+        %option{:value => "code"} {{ 'table.order.code' | translate }}
+        %option{:value => "density"} {{ 'table.order.density' | translate }}
+    %a.btn.btn-default{'ng-click' => 'table.reverse = !table.reverse'} {{ 'table.order.invert' | translate }}
 
   %table.table.table-bordered
     %thead
       %tr
-        %th Country Name
-        %th Country Code
-        %th Population Density in 2010
+        %th {{ 'table.country_name' | translate }}
+        %th {{ 'table.country_code' | translate }}
+        %th {{ 'table.population_density' | translate }}
     %tbody
       %tr{'ng-repeat' => 'country in table.population_density | filter:table.search_query | orderBy:table.order : table.reverse'}
-        %td.name    {{country.name}}
+        %td.name
+          {{country.name}}
+          %a.btn.pull-right.btn-xs.btn-default{'ng-click' => 'table.translateCountryName(country)'} Translate
         %td.code    {{country.code}}
         %td.density {{country.density | number:2}}

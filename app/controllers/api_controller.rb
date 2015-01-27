@@ -7,7 +7,8 @@ class ApiController < ApplicationController
   end
 
   def locales
-    render json: [1,2,3]
+    locale = params[:lang].to_sym
+    render json: Translations.new.for(locale).to_json
   end
 
   private

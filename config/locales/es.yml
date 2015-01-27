@@ -1,0 +1,26 @@
+es:
+  pages:
+    index:
+      description: Esta web contiene una pequeña demo mostrando cómo añadir soporte i18n a una aplicación Rails + Angular.
+      using: Utilizando
+      thanks_to: Gracias a
+
+  table:
+    title: Densidad de Población
+    order:
+      name: Ordenar por nombre de país
+      code: Ordenar por código de país
+      density: Ordenar por densidad de población
+      invert: Invertir orden
+    country_name: Nombre de País
+    country_code: Código de País
+    population_density: Densidad de población
+    search: Buscar
+
+  change_language: Cambiar idioma
+
+  FRA: Francia
+  GRL: Groenlandia
+  ESP: España
+  DNK: Dinamarca
+  SWE: Suecia
